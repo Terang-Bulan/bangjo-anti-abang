@@ -1,2 +1,2 @@
 # bangjo-anti-abang
-AI AIC Sek
+AI AIC Sekk
