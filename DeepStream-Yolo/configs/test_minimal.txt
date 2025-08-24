@@ -1,0 +1,21 @@
+[application]
+enable-perf-measurement=1
+perf-measurement-interval-sec=5
+
+[source0]
+enable=1
+type=3 # Tipe 3 adalah Camera (V4L2), tapi kita gunakan file. Oh, maaf, Tipe 3 adalah File Source.
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_720p.h264
+num-sources=1
+
+[sink0]
+enable=1
+type=1 # Tipe 1 adalah Fakesink, output palsu, tidak menampilkan apa-apa
+sync=0
+
+[streammux]
+gpu-id=0
+batch-size=1
+width=1280
+height=720
+batched-push-timeout=40000

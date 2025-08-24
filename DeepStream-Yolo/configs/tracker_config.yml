@@ -1,0 +1,17 @@
+BaseConfig:
+  minDetectorConfidence: 0.3 # Sesuaikan dengan threshold di pgie Anda
+
+TargetManagement:
+  maxTargetsPerStream: 50
+  minIouDiff4NewTarget: 0.5
+  minTrackerConfidence: 0.5
+
+Objects:
+  - classId: 2 # car
+    minTrackerConfidence: 0.6
+  - classId: 3 # motorcycle
+    minTrackerConfidence: 0.5
+  - classId: 5 # bus
+    minTrackerConfidence: 0.6
+  - classId: 7 # truck
+    minTrackerConfidence: 0.6

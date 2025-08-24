@@ -1,0 +1,25 @@
+[property]
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+model-color-format=0
+
+onnx-file=../models/yolo11s.onnx
+model-engine-file=../models/yolo11s.engine
+labelfile-path=../labels.txt
+
+batch-size=1
+network-mode=2 
+num-detected-classes=80
+gie-unique-id=1
+process-mode=1
+network-type=0
+
+# --- INI BAGIAN PALING PENTING ---
+# Memberitahu DeepStream untuk menggunakan library parser kustom Anda
+custom-lib-path=../nvdsinfer_custom_impl_Yolo/libnvdsinfer_custom_impl_Yolo.so
+parse-bbox-func-name=NvDsInferParseYolo
+
+[class-attrs-all]
+nms-iou-threshold=0.45
+pre-cluster-threshold=0.25
+topk=300
